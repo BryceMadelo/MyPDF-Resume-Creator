@@ -35,6 +35,10 @@ namespace MyPDF_Resume_Creator
             //Deserializing json file
             ResumeInfo finalJson = JsonConvert.DeserializeObject<ResumeInfo>(openJson);
 
+            //PDF
+            Document PDFResume = new Document();
+            PdfWriter.GetInstance(PDFResume, new FileStream(@"C:\Users\user\source\repos\PDF-Resume-Creator\PDF-Resume-Creator\RESUME\MADELO_BRYCE.pdf", FileMode.Create));
+
             Paragraph name = new Paragraph(finalJson.Fullname + "\n\n");
 
             Paragraph PersonalInfo = new Paragraph("Personal Information: \n" + finalJson.Sex + "\n" + finalJson.Age + "\n" + finalJson.Bday + "\n" + finalJson.add + "\n" + finalJson.Nat + "\n" + finalJson.Religion + "\n\n");
@@ -50,6 +54,18 @@ namespace MyPDF_Resume_Creator
             Paragraph skill = new Paragraph("Skills: \n" + finalJson.Skill1 + "\n" + finalJson.Skill2 + "\n" + finalJson.Skill3 + "\n\n");
             
             Paragraph reference = new Paragraph("Reference: \n" + finalJson.Reference);
+
+            //Adding the info to the PDF
+            PDFResume.Open();
+            PDFResume.Add(name);
+            PDFResume.Add(PersonalInfo);
+            PDFResume.Add(ContactInfo);
+            PDFResume.Add(About);
+            PDFResume.Add(educ);
+            PDFResume.Add(exp);
+            PDFResume.Add(skill);
+            PDFResume.Add(reference);
+            PDFResume.Close();
         }
 
         public class ResumeInfo
