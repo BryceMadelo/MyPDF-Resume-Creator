@@ -30,7 +30,7 @@
         {
             this.btnGen = new System.Windows.Forms.Button();
             this.btnChoose = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rchbxChoosenfile = new System.Windows.Forms.RichTextBox();
             this.lablTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -41,7 +41,7 @@
             this.btnGen.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGen.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGen.Location = new System.Drawing.Point(428, 273);
+            this.btnGen.Location = new System.Drawing.Point(428, 263);
             this.btnGen.Name = "btnGen";
             this.btnGen.Size = new System.Drawing.Size(105, 31);
             this.btnGen.TabIndex = 5;
@@ -53,7 +53,7 @@
             this.btnChoose.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnChoose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChoose.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnChoose.Location = new System.Drawing.Point(57, 273);
+            this.btnChoose.Location = new System.Drawing.Point(57, 263);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(75, 31);
             this.btnChoose.TabIndex = 4;
@@ -61,14 +61,14 @@
             this.btnChoose.UseVisualStyleBackColor = false;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
-            // richTextBox1
+            // rchbxChoosenfile
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(57, 76);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(476, 171);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rchbxChoosenfile.BackColor = System.Drawing.Color.White;
+            this.rchbxChoosenfile.Location = new System.Drawing.Point(57, 76);
+            this.rchbxChoosenfile.Name = "rchbxChoosenfile";
+            this.rchbxChoosenfile.Size = new System.Drawing.Size(476, 171);
+            this.rchbxChoosenfile.TabIndex = 3;
+            this.rchbxChoosenfile.Text = "";
             // 
             // lablTitle
             // 
@@ -100,7 +100,7 @@
             this.Controls.Add(this.lablTitle);
             this.Controls.Add(this.btnGen);
             this.Controls.Add(this.btnChoose);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rchbxChoosenfile);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PDFConverter";
             this.Text = "PDF CONVERTER";
@@ -114,7 +114,7 @@
 
         private Button btnGen;
         private Button btnChoose;
-        private RichTextBox richTextBox1;
+        private RichTextBox rchbxChoosenfile;
         private Label lablTitle;
         private DataGridView dataGridView1;
     }

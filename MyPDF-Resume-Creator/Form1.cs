@@ -11,7 +11,7 @@ namespace MyPDF_Resume_Creator
 {
     public partial class PDFConverter : Form
     {
-        
+        string choosenfile;
         public PDFConverter()
         {
             InitializeComponent();
@@ -19,7 +19,13 @@ namespace MyPDF_Resume_Creator
 
         private void btnChoose_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog file = new OpenFileDialog();
+            
+            if (file.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                choosenfile = file.FileName;
+                rchbxChoosenfile.Text = choosenfile;
+            }
         }
     }
 }
