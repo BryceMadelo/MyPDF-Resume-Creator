@@ -47,6 +47,7 @@
             this.btnGen.TabIndex = 5;
             this.btnGen.Text = "Generate PDF";
             this.btnGen.UseVisualStyleBackColor = false;
+            this.btnGen.Click += new System.EventHandler(this.btnGen_Click);
             // 
             // btnChoose
             // 
