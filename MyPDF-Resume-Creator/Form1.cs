@@ -1,8 +1,6 @@
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -15,6 +13,7 @@ namespace MyPDF_Resume_Creator
         public PDFConverter()
         {
             InitializeComponent();
+            
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -62,6 +61,7 @@ namespace MyPDF_Resume_Creator
             //Desingnigs
             About.Alignment = Element.ALIGN_JUSTIFIED;
             name.Font.Size = 30;
+            
 
             //Adding the info to the PDF
             PDFResume.Add(name);
@@ -80,6 +80,10 @@ namespace MyPDF_Resume_Creator
             PDFResume.Add(borderings);
             PDFResume.Add(reference);
             PDFResume.Close();
+
+
+            MessageBox.Show("PDF is created");
+
         }
 
         public class ResumeInfo
