@@ -30,7 +30,26 @@ namespace MyPDF_Resume_Creator
 
         private void btnGen_Click(object sender, EventArgs e)
         {
+            //Reads the choosen file
+            string openJson = File.ReadAllText(choosenfile);
+            //Deserializing json file
+            ResumeInfo finalJson = JsonConvert.DeserializeObject<ResumeInfo>(openJson);
+
+            Paragraph name = new Paragraph(finalJson.Fullname + "\n\n");
+
+            Paragraph PersonalInfo = new Paragraph("Personal Information: \n" + finalJson.Sex + "\n" + finalJson.Age + "\n" + finalJson.Bday + "\n" + finalJson.add + "\n" + finalJson.Nat + "\n" + finalJson.Religion + "\n\n");
+            
+            Paragraph ContactInfo = new Paragraph("Contact Information: \n" + finalJson.Phone + "\n" + finalJson.Tel + "\n" + finalJson.Email + "\n" + finalJson.Fb + "\n\n");
+            
+            Paragraph About = new Paragraph("About Me:\n" + finalJson.AboutMe + "\n\n");
            
+            Paragraph educ = new Paragraph("Educational Attainment:\n" + finalJson.Tertiary + "\n" + finalJson.Year1 + "\n" + finalJson.SeniorHigh + "\n" + finalJson.Year2 + "\n" + finalJson.Secondary + "\n" + finalJson.Year3 + "\n" + finalJson.Primary + "\n" + finalJson.Year4 + "\n\n");
+            
+            Paragraph exp = new Paragraph("Experiences: \n" + finalJson.Company1 + "\n" + finalJson.Position1 + "\n" + finalJson.Company2 + "\n" + finalJson.Position2 + "\n" + finalJson.Company3 + "\n" + finalJson.Position3 + "\n\n");
+            
+            Paragraph skill = new Paragraph("Skills: \n" + finalJson.Skill1 + "\n" + finalJson.Skill2 + "\n" + finalJson.Skill3 + "\n\n");
+            
+            Paragraph reference = new Paragraph("Reference: \n" + finalJson.Reference);
         }
 
         public class ResumeInfo
