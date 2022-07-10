@@ -1,0 +1,46 @@
+{
+  "Fullname": "Bryce Christian A. Madelo",
+
+  //Personal Info
+  "Sex": "Sex: Male",
+  "Age": "Age: 19",
+  "Bday": "Date of Birth: Januray 14, 2003",
+  "add": "Address: #40 Chuchu St. Pamplona, Las Pinas City",
+  "Nat": "Nationality: Filipino",
+  "Religion": "Religion: Roman Catholic",
+
+  //Contact Info
+  "Phone": "Phone#: 09167721215",
+  "Tel": "Telephone#: 8930 66453",
+  "Email": "Email: BraysGG@outlook.com",
+  "Fb": "Facebook: Bryce A. Madelo",
+
+  //About Me
+  "AboutMe": "I am an individual who is self-motivated, reliable, responsible, and enthusiastic about their work. I put in a lot of effort. I am an experienced member of teams who works well under pressure and can quickly adjust to new circumstances. I am productive both when working in a collaborative setting with others and when working on my own initiative. I can do the cooking, I can do the cleaning. I am able to maintain my productivity even when working under time constraints and pressure.",
+
+  //Educational Attainment
+  "Tertiary": "Tertiary: Polytechnic University of the Philippines",
+  "Year1": "Year: 2021 - 2025",
+  "SeniorHigh": "Senior High School: Bernardo College",
+  "year2": "Year: 2019 - 2021",
+  "Secondary": "Secondary: Las Pinas East National High School",
+  "Year3": "Year: 2015 - 2019",
+  "Primary": "Primary: Pamplona Elementary School Central",
+  "Year4": "Year: 2009 - 2015",
+
+  //Experiences
+  "Company1": "Company: FordaCodes",
+  "Position1": "Position: Coder",
+  "Company2": "Company: WeDesign",
+  "Position2": "Position: Frontend Developer",
+  "Company3": "Company: DATA",
+  "Position3": "Position: Data Cleanser",
+
+  //Skills
+  "Skill1": "Adaptability",
+  "Skill2": "Computer Literacy",
+  "Skill3": "Determination",
+
+  //Reference
+  "Reference": "Park Jihyo(TWICE) -Fancy uohh!"
+}
