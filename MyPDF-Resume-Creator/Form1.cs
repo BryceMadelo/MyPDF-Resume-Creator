@@ -59,8 +59,11 @@ namespace MyPDF_Resume_Creator
             
             Paragraph reference = new Paragraph("Reference: \n" + finalJson.Reference);
 
+            //Desingnigs
+            About.Alignment = Element.ALIGN_JUSTIFIED;
+            name.Font.Size = 30;
+
             //Adding the info to the PDF
-            
             PDFResume.Add(name);
             PDFResume.Add(borderings);
             PDFResume.Add(PersonalInfo);
