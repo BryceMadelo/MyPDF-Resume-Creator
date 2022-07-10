@@ -37,7 +37,11 @@ namespace MyPDF_Resume_Creator
 
             //PDF
             Document PDFResume = new Document();
-            PdfWriter.GetInstance(PDFResume, new FileStream(@"C:\Users\user\source\repos\PDF-Resume-Creator\PDF-Resume-Creator\RESUME\MADELO_BRYCE.pdf", FileMode.Create));
+            PdfWriter.GetInstance(PDFResume, new FileStream(@"C:\Users\user\source\repos\MyPDF-Resume-Creator\MyPDF-Resume-Creator\RESUME\MADELO_BRYCE.pdf", FileMode.Create));
+            PDFResume.Open();
+
+            //Separates Info w/ lines
+            LineSeparator borderings = new LineSeparator(3f, 100f, BaseColor.BLACK, Element.ALIGN_CENTER, 2);
 
             Paragraph name = new Paragraph(finalJson.Fullname + "\n\n");
 
@@ -56,14 +60,21 @@ namespace MyPDF_Resume_Creator
             Paragraph reference = new Paragraph("Reference: \n" + finalJson.Reference);
 
             //Adding the info to the PDF
-            PDFResume.Open();
+            
             PDFResume.Add(name);
+            PDFResume.Add(borderings);
             PDFResume.Add(PersonalInfo);
+            PDFResume.Add(borderings);
             PDFResume.Add(ContactInfo);
+            PDFResume.Add(borderings);
             PDFResume.Add(About);
+            PDFResume.Add(borderings);
             PDFResume.Add(educ);
+            PDFResume.Add(borderings);
             PDFResume.Add(exp);
+            PDFResume.Add(borderings);
             PDFResume.Add(skill);
+            PDFResume.Add(borderings);
             PDFResume.Add(reference);
             PDFResume.Close();
         }
